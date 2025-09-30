@@ -1,0 +1,31 @@
+{
+  "name": "@my-project/server",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "cross-env NODE_ENV=production tsc --project tsconfig.build.json",
+    "clean": "rimraf ./dist"
+  },
+  "exports": {
+    "./*": {
+      "development": "./src/*.ts",
+      "default": "./dist/*.js"
+    }
+  },
+  "dependencies": {
+    "@my-project/common": "0.0.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "cross-env": "^10.0.0",
+    "next": "^15.5.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "typescript": "^5.9.2"
+  }
+}

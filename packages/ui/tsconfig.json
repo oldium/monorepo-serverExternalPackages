@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "plugins": [
+      { "name": "next" }
+    ],
+    "customConditions": [
+      "development"
+    ]
+  },
+  "include": [
+    "next.config.ts",
+    "next-env.d.ts",
+    "server.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "../../types/**/*.ts",
+    ".next/types/**/*.ts"
+  ]
+}

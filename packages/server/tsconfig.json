@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "customConditions": [
+      "development"
+    ]
+  },
+  "include": [
+    "test-send-auth.ts",
+    "test-send-db.ts",
+    "src/**/*.ts",
+    "../../types/**/*.ts"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "@my-project/ui",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "bin": {
+    "server": "./dist/bin/server.js"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development TURBOPACK=1 node --conditions development --enable-source-maps --import=extensionless/register --import=@swc-node/register/esm-register ./server.ts",
+    "next-dev": "cross-env NODE_ENV=development TURBOPACK=1 next dev",
+    "build": "cross-env NODE_ENV=production next build",
+    "lint": "next lint",
+    "prod": "node --env-file=./env --import=extensionless/register ./bin/server.js"
+  },
+  "dependencies": {
+    "@my-project/common": "0.0.0",
+    "@my-project/server": "0.0.0",
+    "express": "^5.1.0",
+    "extensionless": "^1.9.9",
+    "next": "^15.5.4",
+    "react": "19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@swc-node/register": "^1.11.1",
+    "@swc/core": "1.13.5",
+    "@swc/helpers": "^0.5.17",
+    "@swc/types": "^0.1.25",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.5.2",
+    "@types/react": "^19.1.15",
+    "@types/react-dom": "^19",
+    "cross-env": "^10.0.0",
+    "typescript": "^5.9.2"
+  }
+}

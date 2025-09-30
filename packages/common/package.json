@@ -1,0 +1,28 @@
+{
+  "name": "@my-project/common",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production tsc --project ./tsconfig.build.json",
+    "clean": "rimraf ./dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./*": {
+      "development": "./src/*.ts",
+      "default": "./dist/*.js"
+    }
+  },
+  "dependencies": {
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "cross-env": "^10.0.0",
+    "typescript": "^5.9.2"
+  }
+}
